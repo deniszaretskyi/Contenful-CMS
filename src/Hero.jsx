@@ -1,11 +1,19 @@
+import heroImage from "./assets/heroImage.svg";
 const Hero = () => {
+  console.log(heroImage);
+
   return (
     <section className="hero">
       <div className="heroText">
         <h1>Contentful CMS</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sint
+          magni provident temporibus omnis commodi consequuntur dolores nam?
+        </p>
       </div>
-      <div className="heroImage"></div>
+      <div className="heroImage">
+        <img src={heroImage} alt="heroImage" />
+      </div>
     </section>
   );
 };
