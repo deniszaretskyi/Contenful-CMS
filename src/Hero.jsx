@@ -3,7 +3,9 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="heroText">
-        <h1>Contentful CMS</h1>
+        <h1>
+          Contentful <span id="heroTextSpan">CMS</span>
+        </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sint
           magni provident temporibus omnis commodi consequuntur dolores nam?

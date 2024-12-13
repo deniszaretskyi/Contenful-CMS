@@ -1,7 +1,8 @@
 import { useGetProjects } from "./hook";
+import loadingIcon from "./assets/loading.svg";
 const Projects = () => {
   const { isLoading, fetchedProjects } = useGetProjects();
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading) return <img id="loadingIcon" src={loadingIcon}></img>;
 
   return (
     <section className="projects">
