@@ -1,15 +1,23 @@
-import { projects } from "./data";
+import { useGetProjects } from "./hook";
 const Projects = () => {
+  const { isLoading, fetchedProjects } = useGetProjects();
+  if (isLoading) return <h1>Loading...</h1>;
+
   return (
     <section className="projects">
-      {projects.map((item) => {
-        const { title, url, image } = item;
-        console.log(image);
-
+      {fetchedProjects.items.map((item) => {
         return (
-          <a key={title} href={url} className="project">
-            <img src={image} alt={title} />
-            <h3>{title}</h3>
+          <a
+            target="_blank"
+            key={item.sys.id}
+            href={item.fields.url}
+            className="project"
+          >
+            <img
+              src={item.fields.image.fields.file.url}
+              alt={item.fields.title}
+            />
+            <h3>{item.fields.title}</h3>
           </a>
         );
       })}

@@ -1,7 +1,5 @@
 import heroImage from "./assets/heroImage.svg";
 const Hero = () => {
-  console.log(heroImage);
-
   return (
     <section className="hero">
       <div className="heroText">
